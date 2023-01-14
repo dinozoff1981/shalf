@@ -5,12 +5,9 @@
 
 <?php
 
-//fetch.php
-//$connect = new mysqli('localhost','root','','folder');
 $connect = new PDO("mysql:host=db4free.net;dbname=shalomdb", "shalom", "@Jerry304870");
 
 $column = array('ticketnumber','invno', 'company', 'fullname','destination','issuedate','fare','ar','ap','vendor','shalomcom','bank');
-//$column = array ("SELECT id,ticketnumber,invno,company,fullname,destination,issuedate,fare,ar,ap,SUM(ar-ap) AS shalomcom,vendor,bank FROM table23 GROUP BY id");
 
 
 $sql = '
@@ -72,6 +69,8 @@ foreach ($result as $row) {
     $sub_array[] = $row["shalomcom"];
     $sub_array[] = $row["vendor"];
     $sub_array[] = $row["bank"];
+
+    
 
     $total_order = $total_order + floatval($row["ar"]);
     $test_order = $test_order + floatval($row["ap"]);

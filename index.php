@@ -34,16 +34,20 @@ body
 
 th{
 
-font-size:12px;
-text-align:center;
+font-size: 10px;
+font-family: 'Times New Roman', Times, serif;
 color:brown;
-font-weight:bold;
-}
+text-align:center;
 
+}
 td{
 
-font-size:12px;
+font-size: 10px;
+font-family: 'Times New Roman', Times, serif;
+
 text-align:center;
+
+
 }
 
 
@@ -72,6 +76,7 @@ font-size:13px;
 
     <div class="container">
         <button class="btn btn-success my-5 btn-lg"><a href="home.php" class="text-light">HOME</a></button>
+        <button onclick="window.print();" class="btn btn-danger btn-lg">PRINT</button>
 </div>
 
 
@@ -92,6 +97,7 @@ font-size:13px;
             <th>Shalom Comm</th>
             <th>Vendor</th>
             <th>Bank</th>
+            
           </tr>
         </thead>
         <tbody></tbody>

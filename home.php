@@ -1,5 +1,7 @@
 
-
+<?php
+include 'header.php';
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -8,15 +10,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" connecttent="IE=edge">
     <meta name="viewport" connecttent="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
   <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css" />
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
 
     <title>Shalom Travel</title>
@@ -34,19 +34,13 @@ body
   background-image: url('bg.jpg');
   background-size: cover;
   background-repeat: none;
+  margin: 0;
+    padding: 0;
+    width: 100%; 
+  
  
 }
 
-h2
-{
-
-    text-align: center;
-    color: darkblue;
-    font-family: 'Times New Roman', Times, serif;
-    margin-top: 30px;
-    text-decoration: underline;
-    font-weight: bold;
-}
 
 tr
 
@@ -59,12 +53,22 @@ color:black;
 }
 th{
 
-    font-size: 12px;
+    font-size: 10px;
     font-family: 'Times New Roman', Times, serif;
     color:brown;
+    text-align:center;
+   
 }
 
+td{
 
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+ 
+    text-align:center;
+   
+
+}
 
 
 
@@ -73,7 +77,7 @@ th{
 #footer td{
 
     color:brown;
-    font-size:13px;
+    font-size:11px;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
     
@@ -82,9 +86,9 @@ th{
 
 #container {
 
-display:flex;
-justify-content:center;
+
 font-family: 'Times New Roman', Times, serif;
+
 
 }
 
@@ -99,9 +103,7 @@ font-family: 'Times New Roman', Times, serif;
 
 <div class="container">
 
-<?php
-include 'header.php';
-?>
+
 <button onclick="window.print();" class="btn btn-danger">PRINT</button>
 <button class="btn btn-dark my-5 "><a href="index.php" class="text-light">Search Record</a></button>
 
@@ -128,7 +130,7 @@ include 'header.php';
                     <th scope="col">Shalom Comm</th>
                     <th scope="col">Vendor</th>
                     <th scope="col">Bank</th>
-                    <th scope="col">Action</th>
+                    <th scope="col" > Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -184,12 +186,11 @@ GROUP BY id";
                             
                             
 
-                            <td>
-                             <button class="btn btn-primary btn-sm"><a href="edit.php?updateid='.$id.'" class="text-light">Update</a></button>
-                             <button class="btn btn-danger btn-sm"><a href="delete.php?deleteid='.$id.'" class="text-light">Delete</a></button>
-
-
-                            </td>
+                            <td >
+                             <button class="btn btn-primary btn-xs "><a href="edit.php?updateid='.$id.'" class="text-light">Update</a></button>
+                            
+                            <button class="btn btn-danger btn-xs " ><a href="delete.php?deleteid='.$id.'" class="text-light">Delete</a></button>
+                           </td>
 
                         </tr>';
 
