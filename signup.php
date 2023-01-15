@@ -55,7 +55,8 @@ body
 {
 
  
-  background-image: url("../folder/bg.jpg");
+ 
+ background-image: url("bg.jpg");
   background-size: cover;
   background-repeat: none;
   

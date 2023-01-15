@@ -30,7 +30,7 @@ text-decoration: underline;
 
 </style>
 <div class="header">
-<img src="../folder/logo.png"  width="200px" height="200px" alt="">
+<img src="logo.png"  width="200px" height="200px" alt="">
 </div>
 
 <div class="shalom">
