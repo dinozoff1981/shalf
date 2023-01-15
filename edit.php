@@ -36,7 +36,6 @@ if(isset($_POST['submit'])){
     $ar=$_POST['ar'];
     $ap=$_POST['ap'];
     $vendor=$_POST['vendor'];
-   
     $bank=$_POST['bank'];
 
 $sql="UPDATE table23 SET ticketnumber='$ticketnumber', invno='$invno',company='$company',fullname='$fullname',destination='$destination',issuedate='$issuedate',fare='$fare',ar='$ar',ap='$ap',vendor='$vendor',bank='$bank' WHERE id=$id";
@@ -45,7 +44,7 @@ $result=mysqli_query($connect,$sql);
 
 if($result){
  
-  header('location:home.php');
+  header('location:index.php');
 }else{
 
   die(mysqli_error($connect));
@@ -85,12 +84,14 @@ if($result){
 		}
 
 
-       body {
+    body
 
-background-image: url('bg.jpg');
-background-size: cover;
-background-repeat: none;
+{
 
+  background-image: url("../folder/bg.jpg");
+  background-size: cover;
+  background-repeat: none;
+ 
 }
 	  </style> 
 

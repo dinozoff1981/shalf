@@ -125,7 +125,7 @@ body
 
 {
 
-  background-image: url('bg.jpg');
+  background-image: url("../folder/bg.jpg");
   background-size: cover;
   background-repeat: none;
  
@@ -265,7 +265,7 @@ img
 
             <button type="submit" class="btn btn-primary my-5" name="submit"><a href="index.php"></a> Done</button>
             <button type="submit" class="btn btn-primary my-5" name="more"><a href="create.php"></a> Add More</button>
-            <button class="btn btn-danger my-5"><a href="home.php" class="text-light">CANCEL</a></button>
+            <button class="btn btn-danger my-5"><a href="index.php" class="text-light">CANCEL</a></button>
 
           
     </form>

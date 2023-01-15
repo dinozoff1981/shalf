@@ -1,6 +1,5 @@
 <?php
 //$connect = new PDO("mysql:host=localhost;dbname=folder", "root", "");
-
 //$connect = new mysqli('localhost','root','','folder');
 
 

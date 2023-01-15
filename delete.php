@@ -8,7 +8,7 @@ if(isset($_GET['deleteid'])){
 	$connect->query($sql);
 	
 	}
-	header("location:home.php");
+	header("location:index.php");
 	exit;
 
 ?>

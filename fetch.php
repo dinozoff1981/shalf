@@ -4,8 +4,9 @@
 
 
 <?php
+$connect = new PDO("mysql:host=localhost;dbname=folder", "root", "");
 
-$connect = new PDO("mysql:host=db4free.net;dbname=shalomdb", "shalom", "@Jerry304870");
+//$connect = new PDO("mysql:host=db4free.net;dbname=shalomdb", "shalom", "@Jerry304870");
 
 $column = array('ticketnumber','invno', 'company', 'fullname','destination','issuedate','fare','ar','ap','vendor','shalomcom','bank');
 
@@ -69,6 +70,9 @@ foreach ($result as $row) {
     $sub_array[] = $row["shalomcom"];
     $sub_array[] = $row["vendor"];
     $sub_array[] = $row["bank"];
+    
+   
+    
 
     
 

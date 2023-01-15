@@ -1,10 +1,9 @@
 <?php 
-
 session_start();
 
-	include("connect.php");
-	include("functions.php");
-	include 'header.php';
+include("connect.php");
+include("functions.php");
+include 'header.php';
 
 
 	if($_SERVER['REQUEST_METHOD'] == "POST")
@@ -16,49 +15,20 @@ session_start();
 		if(!empty($user_name) && !empty($password) && !is_numeric($user_name))
 		{
 
-			//read from database
-			$query = "select * from users where user_name = '$user_name' limit 1";
-			$result = mysqli_query($connect, $query);
+			//save to database
+			$user_id = random_num(20);
+			$query = "insert into users (user_id,user_name,password) values ('$user_id','$user_name','$password')";
 
-			if($result)
-			{
-				if($result && mysqli_num_rows($result) > 0)
-				{
+			mysqli_query($connect, $query);
 
-					$user_data = mysqli_fetch_assoc($result);
-					
-					if($user_data['password'] === $password)
-					{
-
-						$_SESSION['user_id'] = $user_data['user_id'];
-						header("Location:index.php");
-						die;
-					}
-				}
-			}
-			
-			//echo "wrong username or password!";
+			header("Location: login.php");
+			die;
 		}else
 		{
-			//echo "wrong username or password!";
+			//echo "Please enter some valid information!";
 		}
 	}
-
 ?>
-
-
-
-
-
-
-
-
-
-
-
-	
-
-
 
 
 <!DOCTYPE html>
@@ -131,17 +101,14 @@ body
 	<div id="box">
 		
 		<form method="post">
-		<div style="font-size: 20px;margin: 10px;color: darkblue; font-weight:bold;font-family: 'Times New Roman', Times, serif;">Login</div>
-
+			<div style="font-size: 20px;margin: 10px;color: darkblue;font-weight:bold;font-family: 'Times New Roman', Times, serif;">Sign Up</div>
 
 			<input id="text" type="text" name="user_name"><br><br>
 			<input id="text" type="password" name="password"><br><br>
 
 			
-			<button id="button" type="submit" class="btn btn-success">Login</button>
-			<button id="button" type="submit" class="btn btn-success"><a href="signup.php">Create Account</a></button>
+			<button id="button" type="submit" class="btn btn-success">Sign Up</button>
 
-			<!--<button><a href="signup.php">Click to Signup</a></button><br><br> -->
 		</form>
 	</div>
 </body>
